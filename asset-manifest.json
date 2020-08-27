@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/BernardoAguayoOrtega/petgram/static/js/main.639ab5d1.chunk.js",
+    "main.js.map": "/BernardoAguayoOrtega/petgram/static/js/main.639ab5d1.chunk.js.map",
+    "runtime-main.js": "/BernardoAguayoOrtega/petgram/static/js/runtime-main.6a924b1c.js",
+    "runtime-main.js.map": "/BernardoAguayoOrtega/petgram/static/js/runtime-main.6a924b1c.js.map",
+    "static/js/2.72ed9302.chunk.js": "/BernardoAguayoOrtega/petgram/static/js/2.72ed9302.chunk.js",
+    "static/js/2.72ed9302.chunk.js.map": "/BernardoAguayoOrtega/petgram/static/js/2.72ed9302.chunk.js.map",
+    "index.html": "/BernardoAguayoOrtega/petgram/index.html",
+    "precache-manifest.3956d1c8cb00d5772336bab11547fa18.js": "/BernardoAguayoOrtega/petgram/precache-manifest.3956d1c8cb00d5772336bab11547fa18.js",
+    "service-worker.js": "/BernardoAguayoOrtega/petgram/service-worker.js",
+    "static/js/2.72ed9302.chunk.js.LICENSE.txt": "/BernardoAguayoOrtega/petgram/static/js/2.72ed9302.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a924b1c.js",
+    "static/js/2.72ed9302.chunk.js",
+    "static/js/main.639ab5d1.chunk.js"
+  ]
+}
