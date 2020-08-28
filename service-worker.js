@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/petgram/precache-manifest.8e4e8f93de5d3d40474e818b1ae0f919.js"
+  "/petgram/precache-manifest.92fc9475d7e1f99d6f939304de6b76d1.js"
 );
 
 self.addEventListener('message', (event) => {
