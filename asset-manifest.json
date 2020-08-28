@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/petgram/static/js/main.352b4538.chunk.js",
-    "main.js.map": "/petgram/static/js/main.352b4538.chunk.js.map",
+    "main.js": "/petgram/static/js/main.df09a385.chunk.js",
+    "main.js.map": "/petgram/static/js/main.df09a385.chunk.js.map",
     "runtime-main.js": "/petgram/static/js/runtime-main.f007b41b.js",
     "runtime-main.js.map": "/petgram/static/js/runtime-main.f007b41b.js.map",
-    "static/js/2.b367f0b3.chunk.js": "/petgram/static/js/2.b367f0b3.chunk.js",
-    "static/js/2.b367f0b3.chunk.js.map": "/petgram/static/js/2.b367f0b3.chunk.js.map",
+    "static/js/2.c1de42af.chunk.js": "/petgram/static/js/2.c1de42af.chunk.js",
+    "static/js/2.c1de42af.chunk.js.map": "/petgram/static/js/2.c1de42af.chunk.js.map",
     "index.html": "/petgram/index.html",
-    "precache-manifest.3574a44836c53f17a564f80202607fcb.js": "/petgram/precache-manifest.3574a44836c53f17a564f80202607fcb.js",
+    "precache-manifest.79f638c76b7b6469f74338a7467c4b6d.js": "/petgram/precache-manifest.79f638c76b7b6469f74338a7467c4b6d.js",
     "service-worker.js": "/petgram/service-worker.js",
-    "static/js/2.b367f0b3.chunk.js.LICENSE.txt": "/petgram/static/js/2.b367f0b3.chunk.js.LICENSE.txt"
+    "static/js/2.c1de42af.chunk.js.LICENSE.txt": "/petgram/static/js/2.c1de42af.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f007b41b.js",
-    "static/js/2.b367f0b3.chunk.js",
-    "static/js/main.352b4538.chunk.js"
+    "static/js/2.c1de42af.chunk.js",
+    "static/js/main.df09a385.chunk.js"
   ]
 }
