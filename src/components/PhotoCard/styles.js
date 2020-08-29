@@ -1,44 +1,26 @@
-//import styled components
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { fadeIn } from '../../styles/animation'
 
-//import animations
-import { fadeIn } from '../../styles/Animation';
+export const Article = styled.article`
+  min-height: 200px;
+`
 
-//image wrapper
-export const ImgWrapper = styled.figure`
-	border-radius: 10px;
-	display: block;
-	height: 0;
-	overflow: hidden;
-	padding: 50% 0 0 0;
-	position: relative;
-	width: 100%;
-	margin: 0;
-`;
+export const ImgWrapper = styled.div`
+  border-radius: 10px;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  width: 100%; 
+`
 
-//image
-export const Image = styled.img`
-${fadeIn({ time: '1.5s' })}
-	box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
-	height: 100%;
-	object-fit: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-`;
-
-//button
-export const Button = styled.button`
-	display: flex;
-	align-items: center;
-	padding-top: 8px;
-	& svg {
-		margin-right: 4px;
-	}
-`;
-
-//container
-export const Container = styled.article`
-	margin: 0 auto;
-`;
+export const Img = styled.img`
+  ${fadeIn()}
+  box-shadow: 0 10px 14px rgba(0, 0, 0, .2);
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+`

@@ -1,24 +1,43 @@
-//import react
-import React from 'react';
+import React, { Fragment } from 'react'
+import { Article, ImgWrapper, Img } from './styles'
 
-//import styled components
-import { ImgWrapper, Image, Button, Container } from './styles';
+import { useNearScreen } from '../../hooks/useNearScreen'
 
-//import heart icons from react icons
-import { MdFavoriteBorder } from 'react-icons/md';
+import { FavButton } from '../FavButton'
+import { ToggleLikeMutation } from '../../container/ToggleLikeMutation'
 
-export const PhotoCard = ({ cover, id, likes = 0 }) => {
+import { Link } from '@reach/router'
+
+const DEFAULT_IMAGE = 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
+
+export const PhotoCard = ({ id, liked, likes = 0, src = DEFAULT_IMAGE }) => {
+  const [show, element] = useNearScreen()
+
   return (
-    <Container>
-      <a href={`/detail/${id}`}>
-        <ImgWrapper>
-          <Image src={cover} alt={`pet with the id: ${id}`} />
-        </ImgWrapper>
-      </a>
+    <Article ref={element}>
+      {
+        show && <Fragment>
+          <Link to={`/detail/${id}`}>
+            <ImgWrapper>
+              <Img src={src} />
+            </ImgWrapper>
+          </Link>
 
-      <Button>
-        <MdFavoriteBorder size='16px' /> {`${likes} likes`}
-      </Button>
-    </Container>
-  );
-};
+          <ToggleLikeMutation>
+            {
+              (toggleLike) => {
+                const handleFavClick = () => {
+                  toggleLike({ variables: {
+                    input: { id }
+                  } })
+                }
+
+                return <FavButton liked={liked} likes={likes} onClick={handleFavClick} />
+              }
+            }
+          </ToggleLikeMutation>
+        </Fragment>
+      }
+    </Article>
+  )
+}
