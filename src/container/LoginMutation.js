@@ -9,7 +9,7 @@ mutation login($input: UserCredentials!) {
 `
 
 export const LoginMutation = ({ children }) => {
-  return (<Mutation mutation={LOGIN}>
+  return <Mutation mutation={LOGIN}>
     {children}
-  </Mutation>)
+  </Mutation>
 }

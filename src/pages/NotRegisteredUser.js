@@ -7,7 +7,7 @@ import { LoginMutation } from '../container/LoginMutation'
 export const NotRegisteredUser = () => {
   const { activateAuth } = useContext(Context)
 
-  return (<Fragment>
+  return <Fragment>
     <RegisterMutation>
       {
         (register, { data, loading, error }) => {
@@ -45,5 +45,5 @@ export const NotRegisteredUser = () => {
         }
       }
     </LoginMutation>
-  </Fragment>)
+  </Fragment>
 }
