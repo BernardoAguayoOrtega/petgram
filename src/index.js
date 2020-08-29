@@ -1,18 +1,35 @@
-//import react, react dom and react router dom
-import React from 'react';
-import ReactDom from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
+import Context from './Context'
 
-//import app
-import App from './App';
+import { App } from './App'
 
-//const for get the app from index.html
-const root = document.getElementById('app');
+const client = new ApolloClient({
+  uri: 'https://petgram-server.midudev.now.sh/graphql',
+  request: operation => {
+    const token = window.sessionStorage.getItem('token')
+    const authorization = token ? `Bearer ${token}` : ''
+    operation.setContext({
+      headers: {
+        authorization
+      }
+    })
+  },
+  onError: error => {
+    const { networkError } = error
+    if (networkError && networkError.result.code === 'invalid_token') {
+      window.sessionStorage.removeItem('token')
+      window.location.href = '/'
+    }
+  }
+})
 
-//render react dom
-ReactDom.render(
-  <Router>
-    <App />
-  </Router>,
-  root,
-);
+ReactDOM.render(
+  <Context.Provider>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </Context.Provider>,
+  document.getElementById('app'))
